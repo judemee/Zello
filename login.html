@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zello | Meet New People in Your Area</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- ***********CSS************** -->
+    <link rel="stylesheet" href="assets/css/dating.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- ***********Javascript************** -->
+    <script type="text/javascript" src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/dating.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="main-header hide-desktop">
+        <!-- Header Top -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand rx" href="#">Zello</a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup hide-mobile">
+                    <div class="top-header-right navbar-nav ms-auto">
+                        <form onsubmit="return false;" class="navbar-form skout-landing-login-form navbar-right" data-ng-if="!loggedIn" data-ng-controller="LoginCtrl" name="loginForm" data-ng-submit="login(loginForm, true)" novalidate autocapitalize="off" autocorrect="off">
+                            <div class="inputs_wrap">
+                                <div class="form-group"><label class="labels">Email or Zello ID</label><input type="text" id="username" name="username" ng-model="user.username" class="inputs" tabindex="1" autofocus ng-focus="true"></div>
+                                <div class="form-group"><label class="labels">Password (<a class="forget" href="/forgot" tabindex="4">forgot it?</a>)</label><input type="password" id="password" name="password" ng-model="user.password" class="inputs" tabindex="2"></div>
+                                <div class="form-group"><label class="labels">&nbsp;</label><button type="submit" class="btn btn-sm btn-primary" tabindex="3">Log in</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-container hide-desktop" tabindex="0">
+                    <div class="nav-toggle"></div>
+                    <nav class="nav-items">
+                        <div class="nav-item-title">Access</div>
+                        <a class="nav-item" href="index.html">Home</a>
+                        <a class="nav-item" href="login.html">Login</a>
+                        <a class="nav-item" href="signup.html">Signup</a><br>
+                        <div class="nav-item-title">Information</div>
+                        <a class="nav-item" href="about-us.html">About</a>
+                        <a class="nav-item" href="contact-us.html">Contact</a>
+                        <a class="nav-item" href="/tos.html" data-ui-sref="home.corporate.tos">Terms of Use</a>
+                        <a class="nav-item" href="/privacy_header.html" data-ui-sref="home.corporate.privacy">Privacy Policy</a>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- login -->
+    <div class="hide-desktop">
+        <div id="nav-header-login">
+            <p class="login"><a class="home-bar-login" href="index.html">Home</a></p>
+            <p class="login-0">/ login</p>
+        </div>
+        <div class="login-title-wrap">
+            <h2 class="login-title"><strong>Login</strong></h2>
+        </div>
+        <div class="container rx-1-login hide-desktop">
+            <div class="login-wrap">
+                <div class="login-content">
+                    <form class="login-form" id="login-form" autocomplete="off" data-test-id="login-form" data-invalid-class="invalid" data-valid-class="valid" data-invalid-class-target="closest/.inputs-item" data-valid-class-target="closest/.inputs-item" data-invalid-msg-target="siblings/.js-vld-msg" data-empty-msg-target="siblings/.js-vld-msg" data-empty-value-msg="Empty field" data-invalid-format-msg="Incompatible format" data-invalid-country-id="Your country has not been determined. There may be VPN problems." data-invalid-length-msg="Invalid password length" data-required-field="Required field">
+                        <div class="inputs-wrap">
+                            <div class="inputs-item"><label class="label x" for="email">E-mail</label><input class="inputs inputs-field-email" placeholder="your@email.com" type="text" name="email" id="email" data-test-id="reg-email-field">
+                                <div class="js-vld-msg" data-test-id="email-validation-error"></div>
+                            </div>
+                            <div class="inputs-item"><label class="label" for="password">Password</label><input class="inputs inputs-field-pass" placeholder="6+ characters" type="password" name="password" id="password" data-test-id="reg-password-field">
+                                <div class="js-vld-msg" data-test-id="password-validation-error"></div>
+                            </div>
+                        </div>
+                        <div class="submits btn-wrap"><button class="btn btn-primary btn-lg x-1" type="submit" data-name="real" id="js-btn-submit" data-test-id="reg-submit-button"><span>Login</span></button>
+                            <div class="js-vld-msg" data-test-id="submit-validation-error"></div>
+                        </div>
+                        <div class="login-wrap">
+                            <div class="login-item-wrap">
+                                <div class="login-item">
+                                    <input class="inputs-checkbox" type="checkbox" id="remember" name="remember" data-test-id="reg-remember-checkbox">
+                                </div>
+                                <div class="login-item">
+                                    <label class="forgot-password" for="forgot-password" data-test-id="reg-forgot-password-label">
+                                        <span class="hide-for-reg"><a class="forgot-password" href="/lp/regula terms-nonreg/" target="_blank">Forgot Password</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="js-vld-msg" data-test-id="agreement-validation-error"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer hide-desktop">
+            <div class="container">
+                <ul class="footermenu sm-font">
+                    <li class="policy"><a href="about-us.html">About</a></li>
+                    <li class="policy"><a href="contact-us.html">Contact</a></li>
+                    <li class="policy"><a href="/tos.html" data-ui-sref="home.corporate.tos">Terms</a></li>
+                    <li class="policy"><a href="/privacy_header.html" data-ui-sref="home.corporate.privacy">Policy</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- Winter is coming -->
+        <!-- <div class="winter-is-coming">
+        <div class="snow snow--near"></div>
+        <div class="snow snow--near"></div>
+        <div class="snow snow--mid"></div>
+        <div class="snow snow--mid"></div>
+        <div class="snow snow--near snow--alt"></div>
+        <div class="snow snow--near snow--alt"></div>
+    </div> -->
+    </div>
+</body>
+
+</html>

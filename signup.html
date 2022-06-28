@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zello | Meet New People in Your Area</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- ***********CSS************** -->
+    <link rel="stylesheet" href="assets/css/dating.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- ***********Javascript************** -->
+    <script type="text/javascript" src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/dating.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <header class="main-header hide-desktop">
+            <!-- Header Top -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand rx" href="#">Zello</a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup hide-mobile">
+                        <div class="top-header-right navbar-nav ms-auto">
+                            <form onsubmit="return false;" class="navbar-form skout-landing-login-form navbar-right" data-ng-if="!loggedIn" data-ng-controller="LoginCtrl" name="loginForm" data-ng-submit="login(loginForm, true)" novalidate autocapitalize="off" autocorrect="off">
+                                <div class="inputs_wrap">
+                                    <div class="form-group"><label class="labels0">Email or Zello ID</label><input type="text" id="username" name="username" ng-model="user.username" class="inputs0" tabindex="1" autofocus ng-focus="true"></div>
+                                    <div class="form-group"><label class="labels0">Password (<a class="forget" href="/forgot" tabindex="4">forgot it?</a>)</label><input type="password" id="password" name="password" ng-model="user.password" class="inputs0" tabindex="2"></div>
+                                    <div class="form-group"><label class="labels0">&nbsp;</label><button type="submit" class="btn btn-sm btn-primary first" tabindex="3">Log in</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="nav-container " tabindex="0">
+                        <div class="nav-toggle"></div>
+                        <nav class="nav-items">
+                            <div class="nav-item-title">Access</div>
+                            <a class="nav-item" href="index.html">Home</a>
+                            <a class="nav-item" href="login.html">Login</a>
+                            <a class="nav-item" href="signup.html">Signup</a><br>
+                            <div class="nav-item-title">Information</div>
+                            <a class="nav-item" href="about-us.html">About</a>
+                            <a class="nav-item" href="contact-us.html">Contact</a>
+                            <a class="nav-item" href="/tos.html" data-ui-sref="home.corporate.tos">Terms of Use</a>
+                            <a class="nav-item" href="/privacy_header.html" data-ui-sref="home.corporate.privacy">Privacy Policy</a>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Title-Section -->
+        <div class="">
+        <div id="signup-body">
+            <div id="nav-header-signup">
+                <p class="signup"><a class="home-bar-signup" href="index.html">Home</a></p>
+                <p class="signup-0">/ Signup</p>
+            </div>
+            <div class="container fluid" id="signup-heading">
+                <div class="signup-title-wrap">
+                    <h2 class="signup-title"><strong>Signup Form</strong></h2>
+                </div>
+                <div class="container-fluid rx">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 g-0 mx-auto bg-white border px-2 mb-5">
+                            <div class="signup-wrapper m-3">
+                                <div id="registration-form-container" class="formContainer">
+                                    <form id="registration-form" class="">
+                                        <label for="user_type" class="smalllabel">I am...</label>
+                                        <div class="inputContainer">
+                                            <div id="genderInput" class="inputLabelGroup">
+                                                <label class="inputLabel_gender">
+                                                    <input class="gender_check" name="user_type" value="female" type="radio"><span class="labelText">a Woman</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="inputLabel_gender">
+                                                    <input class="gender_check" name="user_type" value="male" type="radio"><span class="labelText">a Man</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <p class="errorMsg">Please select woman or man</p>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                        <label for="user_email" class="smalllabel labelhidescreen">My Email address</label>
+                                        <div class="inputContainer">
+                                            <label class="inputLabel_email">
+                                                <i class="fa fa-envelope fa-lg" aria-hidden="true" style="color:rgb(97, 189, 246)"></i>
+                                                <input id="user_email" name="user_email" placeholder="Email" type="text" class="required" />
+                                            </label>
+                                            <p class="errorMsg">Please enter a valid email address</p>
+                                        </div>
+                                        <label for="user_password" class="smalllabel labelhidescreen">My Password</label>
+                                        <div class="inputContainer">
+                                            <label class="inputLabel_email">
+                                                <i class="fa fa-key fa-lg" aria-hidden="true" style="color:rgb(97, 189, 246)"></i>
+                                                <input id="user_password" name="user_password" placeholder="Password" type="password" class="required" autocomplete="new-password" />
+                                            </label>
+                                            <p class="errorMsg">Please enter a password without whitespaces</p>
+                                        </div>
+                                        <label for="user_password" class="smalllabel labelhidescreen">My Token</label>
+                                        <div class="inputContainer">
+                                            <label class="inputLabel_email">
+                                                <i class="fas fa-user-tag fa-lg" aria-hidden="true" style="color:rgb(97, 189, 246)"></i>
+                                                <input id="user_token" name="user_token" placeholder="Token" type="token" class="required" />
+                                            </label>
+                                            <p class="errorMsg">Please enter a token without whitespaces</p>
+                                        </div>
+                                        <div class="inputContainer">
+                                            <div id="acceptTermsPrivacyAge">
+                                                <label class="inputLabel_agreement">
+                                                    <input name="user_accept" id="user_accept" type="checkbox" class="required" />
+                                                    <span class="checkmarks"></span>
+                                                    <span class="labelText_aggrement">Yes, I've read and accept the <a class="agreement" href="/en/privacy/" target="_blank">privacy policy</a> and the <a class="agreement" href="/en/terms/" target="_blank">terms &amp; conditions</a>. I guarantee that I am at least 18 years old.</span>
+                                                    <p class="errorMsg">Check to proceed</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="send" class="btn cta" id="submit_btn" disabled><strong>Sign up for free</strong></button>
+                                        <div id="pErrorMsg" class="connectionErrorMsg"></div>
+                                        <input type="hidden" name="user_language" value="german" />
+                                    </form>
+                                    <!-- <a href="https://app.zello.com/login" class="headerbottom">Already have an account?</a> -->
+                                </div>
+                                <div id="payment-via-network" class="formContainer">
+                                    <form id="payment-form" class="">
+                                        <div class="inputContainer">
+                                            <label for="subscription" class="smalllabel labelhidescreen">Fill to Get a Token</label>
+                                            <div id="sub_Input" class="inputLabelGroup">
+                                                <label class="inputLabel_sub">
+                                                    <input class="sub_check" name="user_type" value="week" type="radio"><span class="labelText">Weekly (200 NGN)</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="inputLabel_sub">
+                                                    <input class="sub_check" name="user_type" value="month" type="radio"><span class="labelText">Monthly (750 NGN)</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="inputLabel_sub">
+                                                    <input class="sub_check" name="user_type" value="ye" type="radio"><span class="labelText">3 Months<br>(1500 NGN)</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="inputLabel_sub"><span class="labelText">Select Network</span>
+                                                    <select class="box">
+                                                        <option value="" selected="selected" hidden="hidden">Select An Option</option>
+                                                        <option value="MTN">MTN</option>
+                                                        <option value="9mobile">9mobile</option>
+                                                        <option value="Airtel">Airtel</option>
+                                                        <option value="Glo">Glo</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                        <label for="user_number" class="smalllabel labelhidescreen">Your Mobile Number</label>
+                                        <div class="inputContainer">
+                                            <label class="inputLabel_email">
+                                                <i class="fas fa-mobile fa-lg" aria-hidden="true" style="color:rgb(97, 189, 246)"></i>
+                                                <input id="user_number" name="user_number" placeholder="Mobile Number" type="text" class="required" />
+                                            </label>
+                                            <p class="errorMsg">Please enter a valid mobile number</p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Winter is coming -->
+    <!-- <div class="winter-is-coming">
+        <div class="snow snow--near"></div>
+        <div class="snow snow--near"></div>
+        <div class="snow snow--mid"></div>
+        <div class="snow snow--mid"></div>
+        <div class="snow snow--near snow--alt"></div>
+        <div class="snow snow--near snow--alt"></div>
+    </div> -->
+</body>
+
+</html>
